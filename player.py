@@ -1,0 +1,8 @@
+import pygame as pg
+
+class Player:
+    def __init__(self):
+        pass
+
+    def update(self):
+        pass
