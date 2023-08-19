@@ -37,6 +37,9 @@ def ray_casting(screen_array, player_pos, player_angle, player_height, player_pi
                     height_on_screen = int((player_height - height_map[x, y][0])/depth*scale_height + player_pitch)
 
                     # remove unnecessary drawings
+                    if not first_contact:
+                        y_buffer[num_ray] = min(height_on_screen, screen_height)
+                        first_contact = True
 
                     # draw vertical lines
                     if height_on_screen < y_buffer[num_ray]:
