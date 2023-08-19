@@ -41,6 +41,10 @@ def ray_casting(screen_array, player_pos, player_angle, player_height, player_pi
                         y_buffer[num_ray] = min(height_on_screen, screen_height)
                         first_contact = True
 
+                    # remove mirror bug
+                    if height_on_screen < 0:
+                        height_on_screen = 0
+
                     # draw vertical lines
                     if height_on_screen < y_buffer[num_ray]:
                         for screen_y in range(height_on_screen, y_buffer[num_ray]):
