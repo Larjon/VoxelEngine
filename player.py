@@ -23,9 +23,9 @@ class Player:
             self.pitch -= self.vel
 
         if pressed_key[pg.K_LEFT]:
-            self.pitch -= self.angle_vel
+            self.angle -= self.angle_vel
         if pressed_key[pg.K_RIGHT]:
-            self.pitch += self.angle_vel
+            self.angle += self.angle_vel
 
         if pressed_key[pg.K_q]:
             self.height += self.vel
@@ -41,10 +41,10 @@ class Player:
 
         if pressed_key[pg.K_a]:
             self.pos[0] += self.vel * sin_a
-            self.pos[1] += self.vel * cos_a
+            self.pos[1] -= self.vel * cos_a
         if pressed_key[pg.K_d]:
             self.pos[0] -= self.vel * sin_a
-            self.pos[1] -= self.vel * cos_a
+            self.pos[1] += self.vel * cos_a
 
 
 
