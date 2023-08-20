@@ -7,10 +7,10 @@ class Player:
     def __init__(self):
         self.pos = np.array([0, 0], dtype=float)
         self.angle = math.pi/4
-        self.height = 270
+        self.height = 270             # height
         self.pitch = 40
-        self.angle_vel = 0.01
-        self.vel = 3
+        self.angle_vel = 0.01         # key rotation
+        self.vel = 5                  # speed move
 
     def update(self):
         sin_a = math.sin(self.angle)
